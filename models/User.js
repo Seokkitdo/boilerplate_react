@@ -57,8 +57,5 @@ userSchema.pre("save", function (next) {
   }
 });
 
-userSchema.methods.validPassword = function (pwd) {
-  return this.password === pwd;
-};
 const User = mongoose.model("User", userSchema);
 module.exports = User;
